@@ -113,18 +113,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 list($status, $response) = createUser($login, $password, $nonce);
 
                 if ($status == 200) {
-                    echo '<p class="text-success">Пользователь успешно создан.</p>';
+                    echo '<p class="text-success">User create succes.</p>';
                 } else {
-                    echo '<p class="text-danger">Ошибка создания пользователя: ' . $response . '</p>';
+                    echo '<p class="text-danger">Error user create: ' . $response . '</p>';
                 }
             } else {
-                echo '<p class="text-danger">Ошибка получения nonce.</p>';
+                echo '<p class="text-danger">Error get nonce.</p>';
             }
         } else {
-            echo '<p class="text-danger">Неверный токен регистрации.</p>';
+            echo '<p class="text-danger">Wrong token.</p>';
         }
     } else {
-        echo '<p class="text-danger">Пожалуйста, заполните все поля.</p>';
+        echo '<p class="text-danger">Please insern all data.</p>';
     }
 }
 ?>
