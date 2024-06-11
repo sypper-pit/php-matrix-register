@@ -2,10 +2,10 @@
 include('config.php');
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Создание нового пользователя</title>
+    <title>Create new user</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -22,26 +22,26 @@ include('config.php');
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Создание нового пользователя</h1>
+        <h1 class="text-center">Create new user</h1>
         <div id="message" class="text-center"></div>
         <form id="registerForm">
             <div class="form-group">
-                <label for="login">Логин:</label>
+                <label for="login">Login:</label>
                 <input type="text" class="form-control" id="login" name="login" required>
             </div>
             <div class="form-group">
-                <label for="password">Пароль (минимум <?php echo MIN_PASS; ?> символов):</label>
+                <label for="password">Password (minimum <?php echo MIN_PASS; ?> simbol):</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="confirmPassword">Подтверждение пароля:</label>
+                <label for="confirmPassword">Password confirm:</label>
                 <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
             </div>
             <div class="form-group">
-                <label for="token">Токен регистрации:</label>
+                <label for="token">Token for register:</label>
                 <input type="text" class="form-control" id="token" name="token" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block" id="submitBtn" disabled>Создать пользователя</button>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn" disabled>Create user</button>
         </form>
     </div>
 
@@ -59,9 +59,9 @@ include('config.php');
                 } else {
                     $('#submitBtn').prop('disabled', true);
                     if (password.length < minPassLength) {
-                        $('#message').html('<p class="text-danger">Пароль должен быть не менее ' + minPassLength + ' символов</p>');
+                        $('#message').html('<p class="text-danger">Password need ' + minPassLength + ' simbols</p>');
                     } else if (password !== confirmPassword) {
-                        $('#message').html('<p class="text-danger">Пароли не совпадают</p>');
+                        $('#message').html('<p class="text-danger">Password mismatch</p>');
                     }
                 }
             }
@@ -88,7 +88,7 @@ include('config.php');
                             $('#message').html(response);
                         },
                         error: function() {
-                            $('#message').html('<p class="text-danger">Ошибка при создании пользователя</p>');
+                            $('#message').html('<p class="text-danger">Error create user</p>');
                         }
                     });
                 }
