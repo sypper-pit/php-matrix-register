@@ -12,9 +12,12 @@ Files
 1) Install admin panel https://github.com/Awesome-Technologies/synapse-admin .
 2) Add token
 3) Add Admin user for register
-4) Open `get_api.php` , after autorize copy API key
+4) Open `http://site.com/get_api.php` , after autorize copy API key
 5) Open homserver.yaml and get `registration_shared_secret:`
 6) Edit `config.php`
+7) Open `http://site.com/get-token.php` for check token's
+8) Try register user `http://site.com`
+9) If all work - delete `get_api.php` and `get-token.php`
 
 *Security Considerations*
 Ensure that config.php is not accessible directly from the web to prevent exposure of sensitive information.
