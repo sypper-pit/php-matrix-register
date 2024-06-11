@@ -1,11 +1,17 @@
 ***Matrix User Registration System***
 
 This repository contains a set of PHP scripts to handle user registration and API token validation for a Matrix server. Below is a description of the included files and their functionality.
-Files
+
+**Files**
+
 `config.php` - This file contains configuration constants required by the other scripts. It defines constants such as API keys, server names, and minimum password length.
+
 `index.php` - This is the main entry point for the web interface. It includes the config.php file and provides a form for user registration. The form collects user login, password, and registration token.
+
 `register.php` - This script processes the form data from index.php. It handles user registration by sending the collected data to the Matrix server using the provided API key.
+
 `get-token.php` - This script is responsible for generating and validating registration tokens. It ensures that only valid tokens are used for the registration process.
+
 `get_api.php` - This script checks the current API key status and provides an interface to validate the key.
 
 *How to Use*
