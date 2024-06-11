@@ -19,7 +19,9 @@ Files
 8) Try register user `http://site.com`
 9) If all work - delete `get_api.php` and `get-token.php`
 
+
 *Security Considerations*
+
 Ensure that config.php is not accessible directly from the web to prevent exposure of sensitive information.
 Use HTTPS to encrypt data transmission between the client and the server.
 For any questions or issues, please contact the repository maintainer.
